@@ -14,3 +14,7 @@ recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+## Answer
+
+In my implementation of quicksort, it picks the first item as the pivot, then creates three arrays: one with the elements left of the pivot, one with just the pivot, and one with the elements right of the pivot.  It then does the same operation on each array until I have a list of arrays with one element each, and then it is sorted.  The worst case, just like the recursive verion, is when a list always uses the lowest element as a pivot (such as a sorted list).  In this case, each run through would make n comparisons to sort items to the left or right, and it would run this n times to get through everything.  Therefore, the worst case time complexity is $\Theta(n^2)$.
